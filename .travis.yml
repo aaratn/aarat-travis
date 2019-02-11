@@ -5,6 +5,11 @@ stages:
   - deploy
 python:
    - "3.6"
+services:
+  - redis
+before_script:
+  - redis-cli SET a b
+  - redis-cli GET a
 jobs:
   include:
     - stage: "test"
