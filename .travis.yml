@@ -10,13 +10,13 @@ services:
 before_script:
   - redis-cli SET a b
   - redis-cli GET a
-jobs:
-  include:
-    - stage: "test"
-      script:
-          - python -V
-      if: branch = master
-    - stage: "deploy"
-      script:
-          - python main.py
-      if: branch = master
+# jobs:
+#   include:
+#     - stage: "test"
+#       script:
+#           - python -V
+#       if: branch = master
+#     - stage: "deploy"
+#       script:
+#           - python main.py
+#       if: branch = master
