@@ -10,6 +10,12 @@ jobs:
     - stage: "test"
       script:
           - python -V
+      only:
+        branches:
+          - master
     - stage: "deploy"
       script:
           - python main.py
+        only:
+          branches:
+            - master
