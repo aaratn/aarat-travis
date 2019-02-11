@@ -7,9 +7,9 @@ python:
    - "3.6"
 jobs:
   include:
-    - stage: test
+    - stage: "test"
         script:
           - python -V
-    - stage: deploy
+    - stage: "deploy"
         script:
           - python main.py
