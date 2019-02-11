@@ -1,5 +1,8 @@
 dist: xenial
 language: python
+stages:
+  - test
+  - deploy
 python:
    - "3.6"
 jobs:
@@ -7,9 +10,8 @@ jobs:
      - stage: test
        script:
          - python main.py
+       if: branch = master
     - stage: deploy
        script:
          - python main.py
-branches:
-  only:
-  - master
+       if: branch = master
