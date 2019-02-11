@@ -8,8 +8,8 @@ python:
 jobs:
   include:
     - stage: "test"
-        script:
+      script:
           - python -V
     - stage: "deploy"
-        script:
+      script:
           - python main.py
