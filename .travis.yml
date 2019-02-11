@@ -3,4 +3,7 @@ language: python
 python:
    - "3.6"
 script:
-  - python -V
+  - python -U main.py
+branches:
+  only:
+  - master
