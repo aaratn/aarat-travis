@@ -2,8 +2,14 @@ dist: xenial
 language: python
 python:
    - "3.6"
-script:
-  - python main.py
+jobs:
+  include:
+     - stage: test
+       script:
+         - python main.py
+    - stage: deploy
+       script:
+         - python main.py
 branches:
   only:
   - master
