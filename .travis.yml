@@ -16,6 +16,6 @@ jobs:
     - stage: "deploy"
       script:
           - python main.py
-        only:
+      only:
           branches:
             - master
