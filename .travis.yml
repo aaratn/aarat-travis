@@ -9,9 +9,7 @@ jobs:
   include:
      - stage: test
        script:
-         - python -v
-       if: branch = master
+         - python -V
     - stage: deploy
        script:
          - python main.py
-       if: branch = master
